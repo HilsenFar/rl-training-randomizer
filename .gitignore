@@ -1,0 +1,9 @@
+# Build output
+/dist/
+
+# Scraped collections are generated locally, not committed
+/collections/prejump.json
+
+# OS / editor
+Thumbs.db
+.DS_Store

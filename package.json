@@ -1,0 +1,28 @@
+{
+  "name": "rl-training-randomizer",
+  "version": "1.0.0",
+  "description": "Roll random Rocket League training packs from folder-based collections you can extend yourself, with a built-in scraper for Prejump's public database.",
+  "type": "module",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "bin": {
+    "rl-roll": "bin/randomize.mjs"
+  },
+  "scripts": {
+    "roll": "node bin/randomize.mjs",
+    "serve": "node bin/serve.mjs",
+    "scrape": "node bin/scrape.mjs",
+    "test": "node --test",
+    "build": "node build.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "public",
+    "collections",
+    "README.md",
+    "LICENSE"
+  ]
+}

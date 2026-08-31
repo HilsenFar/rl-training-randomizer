@@ -1,0 +1,630 @@
+{
+ "name": "Lander1984 rated master list",
+ "source": {
+  "title": "Rocket League Training Packs & Workshop Master List (Rated)",
+  "author": "Lander1984",
+  "url": "https://www.reddit.com/r/RocketLeagueSchool/",
+  "platform": "reddit.com/r/RocketLeagueSchool",
+  "fetched": "2026-07-27",
+  "note": "Ratings are the author's own (out of 50)."
+ },
+ "count": 77,
+ "packs": [
+  {
+   "name": "Double Tap Playground",
+   "code": "CAFC-FB3E-3C0F-B8F1",
+   "creator": "Wayprotein",
+   "category": "AERIALS",
+   "rating": 50,
+   "notes": null
+  },
+  {
+   "name": "Kevpert: Redirects 1 F7",
+   "code": "5E3A-FC4A-3AD7-0BBD",
+   "creator": "Kevpert",
+   "category": "AERIALS",
+   "rating": 50,
+   "notes": null
+  },
+  {
+   "name": "Aerial Shots - Pass",
+   "code": "C7E0-9E0B-B739-A899",
+   "creator": "Poquito",
+   "category": "AERIALS",
+   "rating": 48,
+   "notes": null
+  },
+  {
+   "name": "Aerial Shots - Redirects",
+   "code": "8D93-C997-0ACD-8416",
+   "creator": "Poquito",
+   "category": "AERIALS",
+   "rating": 40,
+   "notes": "Closer to my skill level"
+  },
+  {
+   "name": "Backboard Therapy",
+   "code": "D7F8-FD53-98D1-DAFE",
+   "creator": "Wayprotein",
+   "category": "AERIALS",
+   "rating": 40,
+   "notes": null
+  },
+  {
+   "name": "Redirects (XXL Pack, Hard)",
+   "code": "C272-B586-A45A-3675",
+   "creator": "Jayless",
+   "category": "AERIALS",
+   "rating": 30,
+   "notes": "Advanced. Aerial redirects"
+  },
+  {
+   "name": "Kevpert - Aerial Car Control",
+   "code": "A3E1-92C2-8757-4195",
+   "creator": "Kevpert",
+   "category": "AERIALS",
+   "rating": 18,
+   "notes": "Frozen ball in the air"
+  },
+  {
+   "name": "Double Jump Aerials",
+   "code": "F269-B159-0BAC-AC2E",
+   "creator": "Doomsee",
+   "category": "AERIALS",
+   "rating": 15,
+   "notes": "Slightly difficult"
+  },
+  {
+   "name": "High Aerials",
+   "code": "2059-414E-B380-3257",
+   "creator": "Sleighprotein",
+   "category": "AERIALS",
+   "rating": 15,
+   "notes": "Slightly difficult"
+  },
+  {
+   "name": "Aerial off Wall",
+   "code": "5BFE-60D6-0D59-79F2",
+   "creator": "Wheelchair {LFflegs}",
+   "category": "AERIALS",
+   "rating": 15,
+   "notes": null
+  },
+  {
+   "name": "Beginner Wall Hits & Aerials",
+   "code": "B00C-128C-7D85-DBB3",
+   "creator": "Christo5",
+   "category": "AERIALS",
+   "rating": 10,
+   "notes": "Great for wall shots and aerials"
+  },
+  {
+   "name": "Intermediate Aerials",
+   "code": "537C-F257-0F3A-4CB0",
+   "creator": "Saltprotein",
+   "category": "AERIALS",
+   "rating": 10,
+   "notes": null
+  },
+  {
+   "name": "Aerials Level 3 (High Aerials)",
+   "code": "76CD-1B72-20D9-53DC",
+   "creator": "Waytoney",
+   "category": "AERIALS",
+   "rating": 10,
+   "notes": null
+  },
+  {
+   "name": "Deevo",
+   "code": "0CB0-16C8-DAAD-B578",
+   "creator": "Wayprotein",
+   "category": "AERIALS",
+   "rating": 8,
+   "notes": "AS &gt;&gt; Torsos: Great and short for aerial warmups"
+  },
+  {
+   "name": "Fast Aerials/Redirects",
+   "code": "24A2-849A-610E-C67C",
+   "creator": "Millennium",
+   "category": "AERIALS",
+   "rating": 8,
+   "notes": "Hard"
+  },
+  {
+   "name": "Syedewynde",
+   "code": "D5DE-29CA-814B-FC48",
+   "creator": "Vxnxmy",
+   "category": "AERIALS",
+   "rating": 6,
+   "notes": "Deflections and a couple other shots"
+  },
+  {
+   "name": "Basic Aerials",
+   "code": "F0BD-E416-D47D-AF28",
+   "creator": "Fluump",
+   "category": "AERIALS",
+   "rating": 5,
+   "notes": null
+  },
+  {
+   "name": "Power Aerials",
+   "code": "7753-F063-4B91-00C3",
+   "creator": "Fluump",
+   "category": "AERIALS",
+   "rating": 4,
+   "notes": null
+  },
+  {
+   "name": "Fast Aerials",
+   "code": "2BF7-DC0C-3D77-3B5E",
+   "creator": "IcyyMike",
+   "category": "AERIALS",
+   "rating": 3,
+   "notes": "Great short warmup"
+  },
+  {
+   "name": "Kevpert: Catches Ground 1 F7",
+   "code": "8FA1-DC94-C18D-D82B",
+   "creator": "Kevpert",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 50,
+   "notes": "Diamond+ level"
+  },
+  {
+   "name": "First Touch Prac",
+   "code": "4B9D-F3A8-DF18-5EC1",
+   "creator": "Ostyn",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 26,
+   "notes": "Awkward angles"
+  },
+  {
+   "name": "Intermediate Power Slides",
+   "code": "A49C-FECE-12C7-9271",
+   "creator": "Wayprotein",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 18,
+   "notes": null
+  },
+  {
+   "name": "Biddle’s Catches",
+   "code": "3EA9-533B-4329-67B3",
+   "creator": "DN/Biddles",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 15,
+   "notes": "Trains slower play"
+  },
+  {
+   "name": "Catch & Control Dribble",
+   "code": "78E7-FDBF-61FB-4EF3",
+   "creator": ".....",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 14,
+   "notes": "Beginner-friendly, from Reddit"
+  },
+  {
+   "name": "Drift Catch Training",
+   "code": "2258-FBD1-2CAE-0246",
+   "creator": "King Ranny",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 12,
+   "notes": null
+  },
+  {
+   "name": "Catch and Dribble",
+   "code": "86B0-EC72-7185-844C",
+   "creator": "T.TV/Barnayyyyy",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 10,
+   "notes": "Diamond+"
+  },
+  {
+   "name": "Catch and Dribble - Hard",
+   "code": "772F-E563-3F9F-0EC8",
+   "creator": "Lazord",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 10,
+   "notes": "Real defense + counterattack drills"
+  },
+  {
+   "name": "Dribble Training",
+   "code": "04C1-42C8-6E5D-6F75",
+   "creator": "Virge",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 8,
+   "notes": "Bounce + catch, Plat+ level"
+  },
+  {
+   "name": "Harder Drift Catches",
+   "code": "DEFC-E584-623D-B4FC",
+   "creator": "King Ranny",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 7,
+   "notes": null
+  },
+  {
+   "name": "Mawzy Flick",
+   "code": "733F-17F2-025E-DCBE",
+   "creator": "Gifflicious",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 5,
+   "notes": "Practice flicks and directional control"
+  },
+  {
+   "name": "Basic Dribbling Skills",
+   "code": "0991-6C97-13DA-9592",
+   "creator": "Floating Mongoose",
+   "category": "GROUND DRIBBLES/FLICKS & CATCHES",
+   "rating": 4,
+   "notes": null
+  },
+  {
+   "name": "Kevpert - Backwall Def F5",
+   "code": "DDC9-8CBF-5E2C-C3BE",
+   "creator": "Kevpert",
+   "category": "DEFENCE",
+   "rating": 50,
+   "notes": "Own-end defense focus"
+  },
+  {
+   "name": "Kevpert - Turn & Clear F5",
+   "code": "0C52-B1DD-39BC-EF97",
+   "creator": "Kevpert",
+   "category": "DEFENCE",
+   "rating": 50,
+   "notes": "Nuanced defensive training"
+  },
+  {
+   "name": "Kevpert Wall Stops 1 F11",
+   "code": "5FEA-4927-9052-664F",
+   "creator": "Kevpert",
+   "category": "DEFENCE",
+   "rating": 50,
+   "notes": "Wall play focus"
+  },
+  {
+   "name": "Kevpert - Wall Powerclears F11",
+   "code": "89F5-2C75-3B79-BA52",
+   "creator": "Samuraipert",
+   "category": "DEFENCE",
+   "rating": 50,
+   "notes": "Deep wall defense pack"
+  },
+  {
+   "name": "Saves",
+   "code": "2E23-ABD5-20C6-DBD4",
+   "creator": "Poquuto",
+   "category": "DEFENCE",
+   "rating": 46,
+   "notes": "Easier version of \"Uncomfortable Saves\""
+  },
+  {
+   "name": "Race Series - Backwall Defense",
+   "code": "5D28-2D14-F60E-A21A",
+   "creator": "Race",
+   "category": "DEFENCE",
+   "rating": 21,
+   "notes": "Strong defense training"
+  },
+  {
+   "name": "Backward Save Pack *************",
+   "code": "5CCE-FB29-7B05-A0B1",
+   "creator": "Orangepie",
+   "category": "DEFENCE",
+   "rating": 20,
+   "notes": "Focus on backwards aerial saves"
+  },
+  {
+   "name": "Insane Defence",
+   "code": "2133-4558-FE23-379C",
+   "creator": "Leeroy Funsweer",
+   "category": "DEFENCE",
+   "rating": 20,
+   "notes": "Forces faster reaction"
+  },
+  {
+   "name": "Protein Wall Clears",
+   "code": "0A7E-C7C8-DE7C-28CA",
+   "creator": "Wayprotein",
+   "category": "DEFENCE",
+   "rating": 16,
+   "notes": null
+  },
+  {
+   "name": "Uncomfortable Saves",
+   "code": "5CB2-6D82-1B54-47B7",
+   "creator": ".....",
+   "category": "DEFENCE",
+   "rating": 16,
+   "notes": null
+  },
+  {
+   "name": "Aerial Saves",
+   "code": "83A9-D9B8-124C-9F2E",
+   "creator": "Gwebi",
+   "category": "DEFENCE",
+   "rating": 15,
+   "notes": "Easy aerial saves"
+  },
+  {
+   "name": "Diamond Defense",
+   "code": "CEBB-085B-D05D-920B",
+   "creator": "LLexis",
+   "category": "DEFENCE",
+   "rating": 15,
+   "notes": null
+  },
+  {
+   "name": "Defensive Backboard Reads",
+   "code": "DABC-E5BB-F347-A7BC",
+   "creator": "Nathan",
+   "category": "DEFENCE",
+   "rating": 12,
+   "notes": null
+  },
+  {
+   "name": "Defense Needed for Diamond",
+   "code": "2195-C0DC-6CAB-B547",
+   "creator": "CBELL",
+   "category": "DEFENCE",
+   "rating": 9,
+   "notes": "Backward & awkward save practice"
+  },
+  {
+   "name": "Backboard Defense",
+   "code": "607B-45E2-351C-4AD9",
+   "creator": "Shock",
+   "category": "DEFENCE",
+   "rating": 9,
+   "notes": null
+  },
+  {
+   "name": "Dodge Control 2 F3",
+   "code": "0624-600D-000E-F2A7",
+   "creator": "Kevpert",
+   "category": "SPECIALTY",
+   "rating": 50,
+   "notes": "Grand Champ"
+  },
+  {
+   "name": "1S Shots F8",
+   "code": "FC42-A3E1-A202-884A",
+   "creator": "Kevpert",
+   "category": "SPECIALTY",
+   "rating": 50,
+   "notes": "Offensive pressure in opponent’s end."
+  },
+  {
+   "name": "Adv Double Taps 1 F10",
+   "code": "3115-DC26-525D-F409",
+   "creator": "Hampert",
+   "category": "SPECIALTY",
+   "rating": 50,
+   "notes": "Grand Champ+"
+  },
+  {
+   "name": "Adv Double Taps 2 F10",
+   "code": "DEC7-4CAD-1452-30D3",
+   "creator": "Kevpert",
+   "category": "SPECIALTY",
+   "rating": 50,
+   "notes": "Grand Champ+"
+  },
+  {
+   "name": "First Touch Boot Camp",
+   "code": "F43A-8231-0B8F-B9FA",
+   "creator": "Poquito",
+   "category": "SPECIALTY",
+   "rating": 22,
+   "notes": "Easy. Suggested by ChatGPT (from Reddit)."
+  },
+  {
+   "name": "1 Bounce Air Dribble",
+   "code": "5D07-D0AA-964D-41D9",
+   "creator": "Lazord",
+   "category": "SPECIALTY",
+   "rating": 15,
+   "notes": null
+  },
+  {
+   "name": "Ceiling Shots",
+   "code": "AFC9-2CCC-95EC-D9D4",
+   "creator": "Wayprotein A&M",
+   "category": "SPECIALTY",
+   "rating": 14,
+   "notes": null
+  },
+  {
+   "name": "Air & Wall Dribbles",
+   "code": "9D87-258C-3C05-6FA9",
+   "creator": "TheJRobinson",
+   "category": "SPECIALTY",
+   "rating": 13,
+   "notes": "Great Wall/Ground to Air dribbles."
+  },
+  {
+   "name": "Flip Reset Training",
+   "code": "1E87-21E8-D5A4-2179",
+   "creator": "Grifflicius",
+   "category": "SPECIALTY",
+   "rating": 13,
+   "notes": "Great for practicing air dribbles in general."
+  },
+  {
+   "name": "Realistic Air Dribbles",
+   "code": "D74D-FB19-06F3-CC67",
+   "creator": "Wayprotein A&M",
+   "category": "SPECIALTY",
+   "rating": 12,
+   "notes": "Grand Champ+"
+  },
+  {
+   "name": "Recovery Training",
+   "code": "DA42-75B1-0469-8A0F",
+   "creator": "Slykau",
+   "category": "SPECIALTY",
+   "rating": 10,
+   "notes": "Real-game recovery scenarios"
+  },
+  {
+   "name": "Flip Resets from Weird Spots",
+   "code": "41BA-E310-EBFD-F32F",
+   "creator": "Wayton",
+   "category": "SPECIALTY",
+   "rating": 9,
+   "notes": null
+  },
+  {
+   "name": "Air Dribbles (Wall & Ground)",
+   "code": "0FB6-C16F-D26D-0A6F",
+   "creator": "Jakerl",
+   "category": "SPECIALTY",
+   "rating": 8,
+   "notes": null
+  },
+  {
+   "name": "Speedflip Catches",
+   "code": "20E9-AEAF-E135-0CA7",
+   "creator": "Lazord",
+   "category": "SPECIALTY",
+   "rating": 8,
+   "notes": null
+  },
+  {
+   "name": "Basic Reset Setups",
+   "code": "920A-21EF-3FF6-1F97",
+   "creator": "Pulse Maktuf",
+   "category": "SPECIALTY",
+   "rating": 7,
+   "notes": "Air dribble practice off wall/in flight."
+  },
+  {
+   "name": "Musty - Speedflip Kickoff Test",
+   "code": "A503-264C-A7EB-D282",
+   "creator": "Musty",
+   "category": "SPECIALTY",
+   "rating": 3,
+   "notes": "Diamond+"
+  },
+  {
+   "name": "Wall to Air Dribble",
+   "code": "5A65-4073-F310-5495",
+   "creator": "IP Joker",
+   "category": "SPECIALTY",
+   "rating": 3,
+   "notes": "Short/Med/Long dribbles from right-hand wall. Diamond+"
+  },
+  {
+   "name": "Musty Speed Flip",
+   "code": "98E6-EF86-7BD6-E585",
+   "creator": "NTGG",
+   "category": "SPECIALTY",
+   "rating": 1,
+   "notes": "Variant without tools"
+  },
+  {
+   "name": "Core 707 Out of Map",
+   "code": "573C-BFBB-4C17-D278",
+   "creator": "Drogings",
+   "category": "SPECIALTY",
+   "rating": 1,
+   "notes": "Directional air roll training without Bakkesmod"
+  },
+  {
+   "name": "Biddle’s Consistency",
+   "code": "55C9-36FE-613D-7F12",
+   "creator": "Biddles",
+   "category": "MIXED OR VARIED",
+   "rating": 50,
+   "notes": "Like “The Ultimate Warmup” but harder"
+  },
+  {
+   "name": "The Ultimate Warmup",
+   "code": "FA24-B2B7-2E8E-193B",
+   "creator": "Hinata",
+   "category": "MIXED OR VARIED",
+   "rating": 50,
+   "notes": "Ground shots, aerials, redirects — everything"
+  },
+  {
+   "name": "Plat to Diamond",
+   "code": "88AD-945E-212F-EF18",
+   "creator": "Inexorable",
+   "category": "MIXED OR VARIED",
+   "rating": 50,
+   "notes": "Easier mix of all skills"
+  },
+  {
+   "name": "Complete Warm-Up x SpookLuke",
+   "code": "A2D5-7908-A70B-EDA9",
+   "creator": "Poquito",
+   "category": "MIXED OR VARIED",
+   "rating": 50,
+   "notes": null
+  },
+  {
+   "name": "Corrupted V3 Advanced",
+   "code": "AF68-891D-0AD5-19FA",
+   "creator": "STX.",
+   "category": "MIXED OR VARIED",
+   "rating": 50,
+   "notes": "Very hard GPAR: Ground/Powershots/Aerials/Redirects"
+  },
+  {
+   "name": "Best Of 2023 RLCS",
+   "code": "5F1A-604B-972A-3C77",
+   "creator": "Griscoe",
+   "category": "MIXED OR VARIED",
+   "rating": 33,
+   "notes": "Mixed scenarios from pro play"
+  },
+  {
+   "name": "Diamond Pack Nov 2024",
+   "code": "2BFC-F8D6-22AC-2AFE",
+   "creator": "Psyonix",
+   "category": "MIXED OR VARIED",
+   "rating": 13,
+   "notes": "Power shots, flicks, ground dribbles"
+  },
+  {
+   "name": "Warmup",
+   "code": "3FEA-24C3-E288-D58E",
+   "creator": "Zeyfox_Off",
+   "category": "MIXED OR VARIED",
+   "rating": 12,
+   "notes": "Backboard aerials, dribbles (ground & air)"
+  },
+  {
+   "name": "Diamond Pack Sept 2024",
+   "code": "853D-A180-A66D-8137",
+   "creator": "Psyonix",
+   "category": "MIXED OR VARIED",
+   "rating": 11,
+   "notes": "Real game scenarios"
+  },
+  {
+   "name": "Misa’s Training Pack 2",
+   "code": "E4A0-8342-8007-E328",
+   "creator": "Pulse Misa",
+   "category": "MIXED OR VARIED",
+   "rating": 10,
+   "notes": null
+  },
+  {
+   "name": "Progression Pack Nov 2024",
+   "code": "978E-2B8F-2F25-5A23",
+   "creator": "Psyonix",
+   "category": "MIXED OR VARIED",
+   "rating": 8,
+   "notes": null
+  },
+  {
+   "name": "Gold",
+   "code": "CA9B-FF51-1348-C574",
+   "creator": "Thanovic",
+   "category": "MIXED OR VARIED",
+   "rating": 7,
+   "notes": "Quick warmup: Aerials, Power Shots, Flicks, etc."
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RL Training Randomizer</title>
+<style>
+  :root {
+    --bg: #0c0e13; --bg2: #12151c; --panel: #161a22; --line: #262c38;
+    --ink: #eef1f6; --muted: #98a2b3; --accent: #ff8a3d; --accent2: #4a90ff;
+    --ok: #35c26b;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: radial-gradient(1200px 600px at 70% -10%, #17202e, var(--bg)) fixed;
+    color: var(--ink); font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  header { padding: 30px 20px 10px; text-align: center; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: .3px; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--muted); margin-top: 4px; font-size: 14px; }
+
+  main { max-width: 860px; margin: 0 auto; padding: 12px 16px 60px; }
+
+  .controls {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; padding: 14px; margin: 14px 0;
+  }
+  label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  select, input {
+    width: 100%; background: var(--bg2); color: var(--ink);
+    border: 1px solid var(--line); border-radius: 9px; padding: 8px 10px; font: inherit;
+  }
+  .rollbar { display: flex; gap: 10px; align-items: center; justify-content: center; margin: 6px 0 18px; }
+  button.roll {
+    background: linear-gradient(180deg, #ff9a52, var(--accent)); color: #1a1206;
+    border: 0; border-radius: 12px; padding: 13px 30px; font-size: 17px; font-weight: 800;
+    letter-spacing: .4px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,138,61,.25);
+  }
+  button.roll:active { transform: translateY(1px); }
+  .count { color: var(--muted); font-size: 13px; }
+
+  .cards { display: flex; flex-direction: column; gap: 12px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--accent2);
+    border-radius: 12px; padding: 14px 16px;
+  }
+  .card h3 { margin: 0 0 4px; font-size: 18px; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .codewrap { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .code {
+    font: 700 16px/1 ui-monospace, "Cascadia Mono", Consolas, monospace;
+    background: var(--bg2); border: 1px solid var(--line); border-radius: 8px;
+    padding: 8px 12px; letter-spacing: 1px; user-select: all;
+  }
+  button.copy {
+    background: var(--bg2); color: var(--ink); border: 1px solid var(--line);
+    border-radius: 8px; padding: 8px 12px; cursor: pointer; font: inherit;
+  }
+  button.copy.done { color: var(--ok); border-color: var(--ok); }
+  .tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: 11px; color: var(--muted); background: var(--bg2); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
+  .note { margin-top: 10px; color: var(--muted); font-size: 13px; }
+  .hint { text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px; }
+  .empty { text-align: center; color: var(--muted); padding: 30px; }
+  a { color: var(--accent2); }
+</style>
+</head>
+<body>
+<header>
+  <h1>RL <span>Training</span> Randomizer</h1>
+  <div class="sub" id="sub">loading…</div>
+</header>
+<main>
+  <div class="controls">
+    <div><label>Collection</label><select id="f-collection"></select></div>
+    <div><label>Category</label><select id="f-category"></select></div>
+    <div><label>Difficulty</label><select id="f-difficulty"></select></div>
+    <div><label>Tag</label><select id="f-tag"></select></div>
+    <div><label>Min rating</label><input id="f-min" type="number" min="0" max="50" placeholder="any"></div>
+    <div><label>How many</label><input id="f-n" type="number" min="1" max="12" value="1"></div>
+  </div>
+  <div class="rollbar">
+    <button class="roll" id="roll">🎲 Roll</button>
+    <span class="count" id="matchcount"></span>
+  </div>
+  <div class="cards" id="cards"></div>
+  <div class="hint">In Rocket League: <b>Training → Custom Training → Use Code</b> → paste a code above.</div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
