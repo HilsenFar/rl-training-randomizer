@@ -8,6 +8,8 @@ Drop a new file in `collections/` and its packs join the pool. There's also a
 built-in **scraper** that pulls thousands of packs from Prejump's public
 database into a collection for you.
 
+![The web UI: filters, a Roll button, and a rolled pack with its code](docs/screenshot.png)
+
 Two ways to use it — a web page and a command line — both reading the same
 collections.
 
