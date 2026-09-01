@@ -35,8 +35,7 @@ public/             the web UI
 Download the latest release zip from the [Releases page](../../releases), unzip
 it, then:
 
-- **`start.cmd`** — opens the web UI in your browser. Pick filters, hit **Roll**,
-  click **Copy code**, paste it into Rocket League.
+- **`RLRoll.exe`** — opens the roller in your browser and sits in the tray until you quit it. Pick filters, hit **Roll**, click **Copy code**, paste it into Rocket League. (`start.cmd` does the same in a console window.)
 - **`roll.cmd`** — rolls a pack in a console window (`roll.cmd --n 3 --category aerials`).
 - **`scrape.cmd`** — refreshes the bundled Prejump collection with the latest packs (needs internet).
 

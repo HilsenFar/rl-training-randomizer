@@ -4,3 +4,10 @@
 # OS / editor
 Thumbs.db
 .DS_Store
+
+# Maintainer signing config — never committed
+signing.local.json
+
+# Launcher build output
+/launcher/bin/
+/launcher/obj/
