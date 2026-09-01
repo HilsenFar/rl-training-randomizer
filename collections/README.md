@@ -56,11 +56,12 @@ elsewhere with little editing: `note` → `notes`, `author` → `creator`,
 | File | What it is |
 |---|---|
 | `reddit-lander1984.json` | Lander1984's rated master list from r/RocketLeagueSchool (ratings out of 50, grouped by skill). |
+| `prejump.json` | Prejump's public training-pack database (difficulty, tags, likes) — ~2,300 packs. |
 
-Run the scraper to add thousands more from Prejump:
+The Prejump collection is a scraper snapshot. Refresh it any time:
 
 ```bash
-node bin/scrape.mjs        # writes collections/prejump.json
+node bin/scrape.mjs        # rewrites collections/prejump.json
 ```
 
 (or double-click `scrape.cmd` in a release build.)

@@ -38,7 +38,7 @@ it, then:
 - **`start.cmd`** — opens the web UI in your browser. Pick filters, hit **Roll**,
   click **Copy code**, paste it into Rocket League.
 - **`roll.cmd`** — rolls a pack in a console window (`roll.cmd --n 3 --category aerials`).
-- **`scrape.cmd`** — adds ~2,300 more packs from Prejump (needs internet).
+- **`scrape.cmd`** — refreshes the bundled Prejump collection with the latest packs (needs internet).
 
 The release bundles its own Node runtime, so there's nothing to install.
 
@@ -49,7 +49,7 @@ Requires **Node ≥ 18**. No dependencies.
 ```bash
 node bin/randomize.mjs --n 3 --category aerials     # roll on the command line
 node bin/serve.mjs                                  # web UI at http://127.0.0.1:8343
-node bin/scrape.mjs                                 # add collections/prejump.json
+node bin/scrape.mjs                                 # refresh collections/prejump.json
 node --test                                         # run the tests
 ```
 
