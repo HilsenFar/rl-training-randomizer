@@ -6,6 +6,10 @@
 Can't decide what to practice? Roll a random **Rocket League** training pack.
 Filter by category, difficulty, tag, creator or rating — or just hit the button.
 
+**Try it in your browser:** [roll.gitato.net/app](https://roll.gitato.net/app/) —
+the same roller, hosted, nothing to install. The download below adds the console
+tools and the Prejump scraper.
+
 It's built around a simple idea: **collections are just JSON files in a folder.**
 Drop a new file in `collections/` and its packs join the pool. There's also a
 built-in **scraper** that pulls thousands of packs from Prejump's public
@@ -100,6 +104,13 @@ node bin/scrape.mjs --out collections/prejump.json
 Training pack codes are public and meant to be shared and pasted into the game;
 the scraper just collects them, and the resulting collection credits Prejump as
 its source.
+
+## The website
+
+[roll.gitato.net](https://roll.gitato.net/) is served from this repo's `docs/`
+folder. The hosted roller at `/app/` is generated: `node bin/build-site.mjs`
+bakes the collections and the web UI into `docs/app/`. Re-run it after changing
+`public/` or `collections/`, then commit the result.
 
 ## License
 

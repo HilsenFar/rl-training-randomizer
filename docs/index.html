@@ -68,6 +68,10 @@
     box-shadow:0 10px 26px rgba(255,158,44,.28), inset 0 1px 0 rgba(255,255,255,.35);
   }
   .dl svg { width:20px; height:20px; stroke:currentColor; }
+  .dl.web {
+    background:linear-gradient(180deg,#4BE8D0,var(--line)); color:#072019;
+    box-shadow:0 10px 26px rgba(39,217,192,.28), inset 0 1px 0 rgba(255,255,255,.35);
+  }
   .dl-meta { font-size:13px; color:var(--ink3); }
   .smartscreen { font-size:13.5px; color:var(--ink3); max-width:620px; margin-top:12px; }
   .smartscreen b { color:var(--ink2); }
@@ -114,13 +118,19 @@
     </figure>
 
     <div class="dl-row">
+      <a class="dl web" href="app/">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 3l14 9-14 9V3z" />
+        </svg>
+        Roll in your browser
+      </a>
       <a class="dl" href="https://github.com/HilsenFar/rl-training-randomizer/releases/latest/download/rl-training-randomizer.zip">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" />
         </svg>
         Download for Windows
       </a>
-      <span class="dl-meta">Free · unzip, run start.cmd · nothing to install</span>
+      <span class="dl-meta">Same roller. The download adds the console tools and the Prejump scraper.</span>
     </div>
 
     <p class="smartscreen">Windows SmartScreen will warn you, because this is an
