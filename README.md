@@ -1,5 +1,8 @@
 # RL Training Randomizer
 
+[![Downloads](https://img.shields.io/github/downloads/HilsenFar/rl-training-randomizer/total?label=downloads&color=ff8a3d)](https://github.com/HilsenFar/rl-training-randomizer/releases)
+[![Latest release](https://img.shields.io/github/v/release/HilsenFar/rl-training-randomizer?label=latest&color=2a2f3a)](https://github.com/HilsenFar/rl-training-randomizer/releases/latest)
+
 Can't decide what to practice? Roll a random **Rocket League** training pack.
 Filter by category, difficulty, tag, creator or rating — or just hit the button.
 
