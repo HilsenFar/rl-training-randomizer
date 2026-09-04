@@ -14,8 +14,7 @@ function currentFilter() {
     collection: $('f-collection').value,
     category: $('f-category').value,
     difficulty: $('f-difficulty').value,
-    tag: $('f-tag').value,
-    min: $('f-min').value === '' ? null : Number($('f-min').value)
+    tag: $('f-tag').value
   };
 }
 function matches(p, f) {
@@ -23,7 +22,6 @@ function matches(p, f) {
   if (f.category && p.category !== f.category) return false;
   if (f.difficulty && p.difficulty !== f.difficulty) return false;
   if (f.tag && !(p.tags || []).includes(f.tag)) return false;
-  if (f.min != null && !(Number(p.rating) >= f.min)) return false;
   return true;
 }
 function pool() { const f = currentFilter(); return CATALOG.packs.filter(p => matches(p, f)); }
@@ -79,7 +77,7 @@ async function init() {
   fillSelect($('f-category'), CATALOG.categories, 'All categories');
   fillSelect($('f-difficulty'), CATALOG.difficulties, 'All difficulties');
   fillSelect($('f-tag'), CATALOG.tags, 'All tags');
-  ['f-collection', 'f-category', 'f-difficulty', 'f-tag', 'f-min'].forEach(id => $(id).addEventListener('change', updateCount));
+  ['f-collection', 'f-category', 'f-difficulty', 'f-tag'].forEach(id => $(id).addEventListener('change', updateCount));
   $('roll').addEventListener('click', roll);
   updateCount();
   roll();

@@ -4,7 +4,7 @@
 [![Latest release](https://img.shields.io/github/v/release/HilsenFar/rl-training-randomizer?label=latest&color=2a2f3a)](https://github.com/HilsenFar/rl-training-randomizer/releases/latest)
 
 Can't decide what to practice? Roll a random **Rocket League** training pack.
-Filter by category, difficulty, tag, creator or rating — or just hit the button.
+Filter by category, difficulty, tag or creator — or just hit the button.
 
 **Try it in your browser:** [roll.gitato.net/app](https://roll.gitato.net/app/) —
 the same roller, hosted, nothing to install. The download below adds the console
@@ -15,7 +15,7 @@ Drop a new file in `collections/` and its packs join the pool. There's also a
 built-in **scraper** that pulls thousands of packs from Prejump's public
 database into a collection for you.
 
-![The web UI: filters, a Roll button, and a rolled pack with its code](docs/screenshot.png)
+![The web UI: filters, a Roll button, and a rolled pack with its code](https://roll.gitato.net/screenshot.png)
 
 Two ways to use it — a web page and a command line — both reading the same
 collections.
@@ -32,7 +32,7 @@ public/             the web UI
 
 ## Use it (the easy way)
 
-Download the latest release zip from the [Releases page](../../releases), unzip
+Download the latest release zip from the [Releases page](https://github.com/HilsenFar/rl-training-randomizer/releases), unzip
 it, then:
 
 - **`RLRoll.exe`** — opens the roller in your browser and sits in the tray until you quit it. Pick filters, hit **Roll**, click **Copy code**, paste it into Rocket League. (`start.cmd` does the same in a console window.)
@@ -62,9 +62,9 @@ node --test                                         # run the tests
 -t, --tag <s>          only packs with a matching tag
     --creator <s>      only packs by a matching creator
 -s, --search <s>       match name / notes / creator / tags
-    --min-rating <n>   only packs rated >= n
-    --weighted         weight the draw by rating
     --seed <n>         repeatable roll
+    --dir <path>       collections directory (default ./collections)
+    --json             print machine-readable JSON
     --list-collections / --list-categories
 ```
 

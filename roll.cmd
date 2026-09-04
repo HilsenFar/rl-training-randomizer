@@ -1,5 +1,5 @@
 @echo off
-rem RL Training Randomizer — roll a pack in a console window.
+rem RL Training Randomizer - roll a pack in a console window.
 rem Pass any options through, e.g.:  roll.cmd --n 3 --category aerials
 setlocal
 cd /d "%~dp0"

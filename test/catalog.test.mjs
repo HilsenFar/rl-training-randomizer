@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { loadCatalog, CODE_RE } from '../lib/catalog.mjs';
+import { loadCatalog, sortDifficulties, CODE_RE, DEFAULT_DIR } from '../lib/catalog.mjs';
 import { filterPacks, pickRandom, rng } from '../lib/pick.mjs';
 
 function tmpDir(files) {
@@ -52,6 +52,41 @@ test('loader merges the same code across collections', () => {
   assert.deepEqual(packs[0].tags.sort(), ['x', 'y']);
 });
 
+test('loader fills empty fields from a later file with the same code', () => {
+  const dir = tmpDir({
+    'a.json': { name: 'A', packs: [{ name: 'Shadow Defense', code: '5CCE-FB29-7B05-A0B1', difficulty: 'Gold' }] },
+    'b.json': { name: 'B', packs: [{ name: 'Shadow Defense (rated)', code: '5CCE-FB29-7B05-A0B1', rating: 20, category: 'DEFENCE', difficulty: 'Platinum' }] }
+  });
+  const { packs } = loadCatalog({ dir });
+  assert.equal(packs.length, 1);
+  assert.equal(packs[0].name, 'Shadow Defense');      // the first file wins for fields it has
+  assert.equal(packs[0].difficulty, 'Gold');
+  assert.equal(packs[0].rating, 20);                   // empty fields come from the second
+  assert.equal(packs[0].category, 'DEFENCE');
+  assert.equal(filterPacks(packs, { category: 'defence' }).length, 1);
+});
+
+test('loader treats null and empty ratings as unrated', () => {
+  const dir = tmpDir({
+    'a.json': { name: 'A', packs: [
+      { name: 'Null', code: 'AAAA-BBBB-CCCC-0001', rating: null },
+      { name: 'Empty', code: 'AAAA-BBBB-CCCC-0002', rating: '' },
+      { name: 'Zero', code: 'AAAA-BBBB-CCCC-0003', rating: 0 }
+    ] }
+  });
+  const { packs } = loadCatalog({ dir });
+  assert.equal(packs.find(p => p.name === 'Null').rating, null);
+  assert.equal(packs.find(p => p.name === 'Empty').rating, null);
+  assert.equal(packs.find(p => p.name === 'Zero').rating, 0);
+});
+
+test('sortDifficulties follows the rank ladder and puts unknown names last', () => {
+  assert.deepEqual(
+    sortDifficulties(['Grand Champion', 'Gold', 'Supersonic Legend', 'Diamond', 'Platinum', 'Champion', 'Bronze', 'Silver']),
+    ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Champion', 'Grand Champion', 'Supersonic Legend']);
+  assert.deepEqual(sortDifficulties(['Zeta', 'gold', 'Alpha']), ['gold', 'Alpha', 'Zeta']);
+});
+
 test('filterPacks matches case-insensitive substrings', () => {
   const packs = [
     { name: 'One', code: 'A', category: 'AERIALS', difficulty: 'Gold', tags: ['Saves'], rating: 48, collection: 'c', collections: ['c'] },
@@ -59,7 +94,6 @@ test('filterPacks matches case-insensitive substrings', () => {
   ];
   assert.equal(filterPacks(packs, { category: 'aerial' }).length, 1);
   assert.equal(filterPacks(packs, { tag: 'save' }).length, 1);
-  assert.equal(filterPacks(packs, { minRating: 40 }).length, 1);
   assert.equal(filterPacks(packs, { difficulty: 'gold' })[0].name, 'One');
 });
 
@@ -76,9 +110,38 @@ test('rng is deterministic for a given seed', () => {
   assert.deepEqual(a.map(p => p.code), b.map(p => p.code));
 });
 
-test('the shipped collections load and every code is valid', () => {
-  const { packs, collections } = loadCatalog(); // default ./collections
-  assert.ok(collections.length >= 1);
-  assert.ok(packs.length >= 1);
-  for (const p of packs) assert.ok(CODE_RE.test(p.code), 'bad code: ' + p.code);
+test('the shipped collections load without warnings and keep every valid code', () => {
+  const warns = [];
+  const { packs, collections } = loadCatalog({ warn: m => warns.push(m) }); // default ./collections
+  assert.deepEqual(warns, []);
+  assert.ok(collections.length >= 2);
+  assert.ok(packs.length >= 2000);
+  // One pack per unique valid code across the raw files (2,373 as shipped).
+  const raw = new Set();
+  for (const c of collections) {
+    for (const p of JSON.parse(fs.readFileSync(path.join(DEFAULT_DIR, c.file), 'utf8')).packs) {
+      const code = String(p.code || '').trim();
+      if (CODE_RE.test(code)) raw.add(code.toUpperCase());
+    }
+  }
+  assert.equal(packs.length, raw.size);
+});
+
+test('the category filter still reaches the categorised packs after the merge', () => {
+  const { packs } = loadCatalog();
+  const lander = JSON.parse(fs.readFileSync(path.join(DEFAULT_DIR, 'reddit-lander1984.json'), 'utf8')).packs;
+  const rawAerials = lander.filter(p => /aerial/i.test(p.category || '')).length;
+  assert.ok(rawAerials > 1);
+  assert.equal(filterPacks(packs, { category: 'aerial' }).length, rawAerials);
+});
+
+test('a roll over the whole catalog can land on packs without a rating', () => {
+  const { packs } = loadCatalog();
+  const unrated = packs.filter(p => p.rating == null);
+  assert.ok(unrated.length > 0);                       // Prejump packs carry no rating
+  // No filter and no weighting: with the shipped mix (most packs unrated) a
+  // 20-pack roll must include unrated ones, whatever the seed.
+  const picked = pickRandom(filterPacks(packs, {}), { count: 20, random: rng(7) });
+  assert.equal(picked.length, 20);
+  assert.ok(picked.some(p => p.rating == null));
 });

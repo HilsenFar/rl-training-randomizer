@@ -1,5 +1,5 @@
 @echo off
-rem RL Training Randomizer — add thousands of packs from Prejump.
+rem RL Training Randomizer - add thousands of packs from Prejump.
 rem Writes collections\prejump.json. Pass options through, e.g. scrape.cmd --sort newest
 setlocal
 cd /d "%~dp0"

@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>RL Roll — training pack randomizer</title>
-<meta name="description" content="Roll a random Rocket League training pack. Filter by category, difficulty or rating. Collections are JSON files you can extend yourself, plus a scraper for thousands more packs." />
+<link rel="icon" href="data:,">
+<meta name="description" content="Roll a random Rocket League training pack. Filter by category, difficulty or tag. Collections are JSON files you can extend yourself, plus a scraper for thousands more packs." />
 <meta property="og:title" content="RL Roll — training pack randomizer" />
 <meta property="og:description" content="Can't decide what to practice? Roll a random Rocket League training pack." />
 <meta property="og:image" content="https://roll.gitato.net/screenshot.png" />
@@ -39,7 +40,8 @@
   }
   .wrap { max-width:920px; margin:0 auto; padding:0 22px 72px; }
   a { color:var(--blue); }
-  a:focus-visible, .dl:focus-visible { outline:2px solid var(--line); outline-offset:3px; border-radius:4px; }
+  a:focus-visible { outline:2px solid var(--line); outline-offset:3px; border-radius:4px; }
+  .dl:focus-visible { outline:2px solid var(--line); outline-offset:3px; border-radius:10px; }
 
   .top { display:flex; align-items:baseline; gap:14px; padding:26px 0 48px; }
   .top a.mark { font-weight:800; font-size:14px; letter-spacing:.24em; color:var(--ink); text-decoration:none; }
@@ -105,11 +107,11 @@
   </div>
 
   <section>
-    <div class="eyebrow"><span>RL Roll</span><span class="sep">·</span><span>Free · open source</span></div>
+    <div class="eyebrow"><span>RL Roll</span><span class="sep">·</span><span>Free · source on GitHub</span></div>
     <h1>Can't decide what to practice? <span class="hl">Roll for it.</span></h1>
     <p class="sub">A training pack randomizer for Rocket League. Hit the button
     and get a pack with its code ready to copy — or filter by category,
-    difficulty, tag or rating first. Comes with a curated collection, and packs
+    difficulty or tag first. Comes with a curated collection, and packs
     live in plain JSON files you can add to yourself.</p>
 
     <figure class="shot">
@@ -144,7 +146,8 @@
   <div class="facts">
     <section class="card">
       <h2>Web page and command line</h2>
-      <p><code>start.cmd</code> opens the roller in your browser.
+      <p><code>RLRoll.exe</code> opens the roller in your browser and sits in
+      the tray (<code>start.cmd</code> does the same in a console).
       <code>roll.cmd</code> rolls in a console — <code>roll.cmd --n 3
       --category aerials</code> gives you tonight's warmup routine.</p>
     </section>
@@ -167,7 +170,7 @@
     <ul>
       <li>No login, no account, no telemetry.</li>
       <li>The roller works entirely offline. Only the scraper goes online, to Prejump, when you run it.</li>
-      <li>Open source under PolyForm Noncommercial. Pack codes belong to their creators.</li>
+      <li>Source available under PolyForm Noncommercial, free for non-commercial use. Pack codes belong to their creators.</li>
     </ul>
   </section>
 

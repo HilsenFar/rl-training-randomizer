@@ -11,24 +11,26 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadCatalog } from '../lib/catalog.mjs';
+import { loadCatalog, sortDifficulties } from '../lib/catalog.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(HERE, '..', 'public');
 const PORT = Number(process.env.PORT) || 8343;
 
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.json': 'application/json' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.json': 'application/json' };
 
 function catalog() {
   const { packs, collections } = loadCatalog({ warn: m => console.error('note: ' + m) });
   const categories = [...new Set(packs.map(p => p.category).filter(Boolean))].sort();
-  const difficulties = [...new Set(packs.map(p => p.difficulty).filter(Boolean))];
+  const difficulties = sortDifficulties([...new Set(packs.map(p => p.difficulty).filter(Boolean))]);
   const tags = [...new Set(packs.flatMap(p => p.tags || []))].sort();
   return { packs, collections, categories, difficulties, tags };
 }
 
 const server = http.createServer((req, res) => {
-  const url = new URL(req.url, 'http://localhost');
+  let url;
+  try { url = new URL(req.url, 'http://localhost'); }
+  catch { res.writeHead(400); res.end('bad request'); return; }
   if (url.pathname === '/api/catalog') {
     res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
     res.end(JSON.stringify(catalog()));
@@ -36,13 +38,15 @@ const server = http.createServer((req, res) => {
   }
   let file = url.pathname === '/' ? 'index.html' : url.pathname.replace(/^\/+/, '');
   const full = path.join(PUBLIC, file);
-  if (!full.startsWith(PUBLIC)) { res.writeHead(403); res.end(); return; }
+  if (full !== PUBLIC && !full.startsWith(PUBLIC + path.sep)) { res.writeHead(403); res.end(); return; }
   fs.readFile(full, (err, buf) => {
     if (err) { res.writeHead(404); res.end('not found'); return; }
     res.writeHead(200, { 'Content-Type': TYPES[path.extname(full)] || 'application/octet-stream' });
     res.end(buf);
   });
 });
+
+server.on('error', e => { console.error('server error: ' + e.message); process.exit(1); });
 
 server.listen(PORT, '127.0.0.1', () => {
   const c = catalog();

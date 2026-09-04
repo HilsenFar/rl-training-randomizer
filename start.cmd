@@ -1,5 +1,5 @@
 @echo off
-rem RL Training Randomizer — open the web UI in your browser.
+rem RL Training Randomizer - open the web UI in your browser.
 setlocal
 cd /d "%~dp0"
 set "NODE=%~dp0node\node.exe"

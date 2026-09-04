@@ -22,7 +22,7 @@ packs, you just drop a new file in here. No code changes, no registration.
       "creator": "Poquito",                    // optional
       "category": "AERIALS",                   // optional — a free-form group
       "difficulty": "Gold",                    // optional — e.g. Silver / Gold / Champion
-      "rating": 48,                            // optional — any number (used by --min-rating)
+      "rating": 48,                            // optional — any number, shown on the card
       "tags": ["First touch", "Warmup"],       // optional — free-form tags
       "notes": "Pure first-touch control."     // optional
     }
@@ -32,7 +32,7 @@ packs, you just drop a new file in here. No code changes, no registration.
 
 **Only `name` and `code` are required.** Everything else is optional and just
 gives you more ways to filter (`--category`, `--difficulty`, `--tag`,
-`--min-rating`, `--creator`).
+`--creator`).
 
 ### Codes
 

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RL Training Randomizer</title>
+<link rel="icon" href="data:,">
 <style>
   :root {
     --bg: #0c0e13; --bg2: #12151c; --panel: #161a22; --line: #262c38;
@@ -36,7 +37,7 @@
   .rollbar { display: flex; gap: 10px; align-items: center; justify-content: center; margin: 6px 0 18px; }
   button.roll {
     background: linear-gradient(180deg, #ff9a52, var(--accent)); color: #1a1206;
-    border: 0; border-radius: 12px; padding: 13px 30px; font-size: 17px; font-weight: 800;
+    border: 0; border-radius: 12px; padding: 13px 30px; font-family: inherit; font-size: 17px; font-weight: 800;
     letter-spacing: .4px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,138,61,.25);
   }
   button.roll:active { transform: translateY(1px); }
@@ -76,15 +77,14 @@
 </header>
 <main>
   <div class="controls">
-    <div><label>Collection</label><select id="f-collection"></select></div>
-    <div><label>Category</label><select id="f-category"></select></div>
-    <div><label>Difficulty</label><select id="f-difficulty"></select></div>
-    <div><label>Tag</label><select id="f-tag"></select></div>
-    <div><label>Min rating</label><input id="f-min" type="number" min="0" max="50" placeholder="any"></div>
-    <div><label>How many</label><input id="f-n" type="number" min="1" max="12" value="1"></div>
+    <div><label for="f-collection">Collection</label><select id="f-collection"></select></div>
+    <div><label for="f-category">Category</label><select id="f-category"></select></div>
+    <div><label for="f-difficulty">Difficulty</label><select id="f-difficulty"></select></div>
+    <div><label for="f-tag">Tag</label><select id="f-tag"></select></div>
+    <div><label for="f-n">How many</label><input id="f-n" type="number" min="1" max="12" value="1"></div>
   </div>
   <div class="rollbar">
-    <button class="roll" id="roll">🎲 Roll</button>
+    <button class="roll" id="roll"><span aria-hidden="true">🎲 </span>Roll</button>
     <span class="count" id="matchcount"></span>
   </div>
   <div class="cards" id="cards"></div>

@@ -14,7 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadCatalog } from '../lib/catalog.mjs';
+import { loadCatalog, sortDifficulties } from '../lib/catalog.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, '..');
@@ -28,7 +28,7 @@ const catalog = {
   packs,
   collections,
   categories: [...new Set(packs.map(p => p.category).filter(Boolean))].sort(),
-  difficulties: [...new Set(packs.map(p => p.difficulty).filter(Boolean))],
+  difficulties: sortDifficulties([...new Set(packs.map(p => p.difficulty).filter(Boolean))]),
   tags: [...new Set(packs.flatMap(p => p.tags || []))].sort()
 };
 fs.writeFileSync(path.join(OUT, 'catalog.json'), JSON.stringify(catalog));

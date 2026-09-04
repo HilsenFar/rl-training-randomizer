@@ -6,7 +6,6 @@
 //   node bin/randomize.mjs --n 3               three random packs
 //   node bin/randomize.mjs --category aerials  only aerial packs
 //   node bin/randomize.mjs --difficulty gold --tag saves
-//   node bin/randomize.mjs --min-rating 45 --weighted
 //   node bin/randomize.mjs --list-collections
 //   node bin/randomize.mjs --list-categories
 
@@ -26,10 +25,8 @@ function parseArgs(argv) {
       case '--tag': case '-t': a.tag = next(); break;
       case '--creator': a.creator = next(); break;
       case '--search': case '-s': a.text = next(); break;
-      case '--min-rating': a.minRating = Number(next()); break;
       case '--seed': a.seed = parseInt(next(), 10); break;
       case '--dir': a.dir = next(); break;
-      case '--weighted': a.flags.add('weighted'); break;
       case '--list-collections': a.flags.add('list-collections'); break;
       case '--list-categories': a.flags.add('list-categories'); break;
       case '--json': a.flags.add('json'); break;
@@ -51,8 +48,6 @@ Usage: node bin/randomize.mjs [options]
   -t, --tag <s>          only packs with a tag matching <s>
       --creator <s>      only packs by a creator matching <s>
   -s, --search <s>       match name / notes / creator / tags
-      --min-rating <n>   only packs rated >= n
-      --weighted         weight the draw by rating (higher = likelier)
       --seed <n>         repeatable roll
       --dir <path>       collections directory (default ./collections)
       --json             print machine-readable JSON
@@ -102,7 +97,7 @@ function main() {
   const pool = filterPacks(packs, a);
   if (!pool.length) { console.error('No packs match those filters. Loosen them, or check --list-categories / --list-collections.'); process.exit(1); }
 
-  const chosen = pickRandom(pool, { count: a.n, weighted: a.flags.has('weighted'), random: rng(a.seed) });
+  const chosen = pickRandom(pool, { count: a.n, random: rng(a.seed) });
 
   if (a.flags.has('json')) { console.log(JSON.stringify(chosen, null, 2)); return; }
 
