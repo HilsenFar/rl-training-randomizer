@@ -100,6 +100,8 @@
     box-shadow:0 10px 26px rgba(39,217,192,.28), inset 0 1px 0 rgba(255,255,255,.35);
   }
   .dl-meta { font-size:13px; color:var(--ink3); }
+  .relver { display:block; margin-top:3px; color:var(--line); font-weight:600; }
+  .relver:empty { display:none; }
   .smartscreen { font-size:13.5px; color:var(--ink3); max-width:620px; margin-top:12px; }
   .smartscreen b { color:var(--ink2); }
 
@@ -171,7 +173,7 @@
         </svg>
         Download for Windows
       </a>
-      <span class="dl-meta">Same roller. The download adds the console tools and the Prejump scraper.</span>
+      <span class="dl-meta">Same roller. The download adds the console tools and the Prejump scraper.<span class="relver" id="relver"></span></span>
     </div>
 
     <p class="smartscreen">Windows SmartScreen will warn you, because this is an
@@ -233,6 +235,28 @@
   "description": "A training pack randomizer for Rocket League: roll a random pack, or filter by category, difficulty or tag first.",
   "author": { "@type": "Person", "name": "HilsenFar", "url": "https://github.com/HilsenFar" }
 }
+</script>
+<script>
+/* Latest release, read from GitHub so this line can never go stale. One call,
+   cached for an hour in this browser; on any failure the line stays empty. */
+(function(){
+  var el = document.getElementById('relver');
+  if (!el || !window.fetch) return;
+  var KEY = 'rl.relver.rl-training-randomizer', M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function show(tag, at){
+    if (!/^v?[\w.-]{1,30}$/.test(tag) || !/^\d{4}-\d\d-\d\dT/.test(at)) return;
+    var d = new Date(at);
+    el.textContent = 'Latest: ' + tag + ' \u00b7 ' + d.getUTCDate() + ' ' + M[d.getUTCMonth()] + ' ' + d.getUTCFullYear();
+  }
+  try { var c = JSON.parse(localStorage.getItem(KEY) || 'null'); if (c && Date.now() - c.t < 3600000) return show(c.tag, c.at); } catch (e) {}
+  fetch('https://api.github.com/repos/HilsenFar/rl-training-randomizer/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(j){
+      if (!j || typeof j.tag_name !== 'string') return;
+      show(j.tag_name, j.published_at);
+      try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), tag: j.tag_name, at: j.published_at })); } catch (e) {}
+    }).catch(function(){});
+})();
 </script>
 </body>
 </html>
