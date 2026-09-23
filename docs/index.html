@@ -248,11 +248,18 @@
     var d = new Date(at);
     el.textContent = 'Latest: ' + tag + ' \u00b7 ' + d.getUTCDate() + ' ' + M[d.getUTCMonth()] + ' ' + d.getUTCFullYear();
   }
-  try { var c = JSON.parse(localStorage.getItem(KEY) || 'null'); if (c && Date.now() - c.t < 3600000) return show(c.tag, c.at); } catch (e) {}
+  try {
+    var c = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (c && c.fail) { if (Date.now() - c.t < 900000) return; }        // refused recently: leave GitHub alone
+    else if (c && Date.now() - c.t < 3600000) return show(c.tag, c.at);
+  } catch (e) {}
   fetch('https://api.github.com/repos/HilsenFar/rl-training-randomizer/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
     .then(function(r){ return r.ok ? r.json() : null; })
     .then(function(j){
-      if (!j || typeof j.tag_name !== 'string') return;
+      if (!j || typeof j.tag_name !== 'string') {
+        try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), fail: true })); } catch (e) {}
+        return;
+      }
       show(j.tag_name, j.published_at);
       try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), tag: j.tag_name, at: j.published_at })); } catch (e) {}
     }).catch(function(){});
